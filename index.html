@@ -1,345 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeeFood</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            height: 6600px; /* Đặt chiều cao lớn để tạo cuộn */
+            width: auto;
+            background: #C7D7FB;
+            
+            display: flex;
+            justify-items: center;
+            position: relative;
+        }
+       
+          
+        .head{
+            height: 100px;
+            width: auto;
+            background-color: rgba(255, 255, 255, 0.419);
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            box-shadow: 0 0 15px #5293c1;
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
- <HEAD>
- <meta charset="utf-8" />
-  <TITLE> Code trái tim đập GameVui </TITLE>
-  <META NAME="Generator" CONTENT="EditPlus">
-  <META NAME="Author" CONTENT="">
-  <META NAME="Keywords" CONTENT="">
-  <META NAME="Description" CONTENT="">
- 
+        } 
+        .head1{
+  
+        height: 100px;
+        width: auto;
+        display: flex; 
+        justify-content: space-between;
+        position: absolute;
+        left: 70px;
+        right: 70px;
+        flex-wrap: nowrap;
+        align-content: center;
+        white-space: nowrap;
+        }
+        .food:hover {
+            color: #f1b0da;
+            text-decoration: underline;
+        }
+        .drink:hover {
+            color: #f1b0da;
+            text-decoration: underline;
+        }
+        .cake:hover {
+            color: #f1b0da;
+            text-decoration: underline;
+        }
+        .support:hover {
+            color: #f1b0da;
+            text-decoration: underline;
+        }
+        .account:hover {
+            color: #f1b0da;
+            text-decoration: underline;
+        }
    
-  <style>
-  html, body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
- 
-.box {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-}
- 
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-#pinkboard {
-  position: relative;
-  margin: auto;
-  height: 500px;
-  width: 500px;
-  animation: animate 1.3s infinite;
-}
- 
-#pinkboard:before, #pinkboard:after {
-  content: '';
-  position: absolute;
-  background: #FF5CA4;
-  width: 100px;
-  height: 160px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
- 
-#pinkboard:before {
-  left: 100px;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-              0 10px 10px rgba(0,0,0,0.22);
-}
- 
-#pinkboard:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-}
- 
-@keyframes animate {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(.8);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-  </style>
- </HEAD>
- 
- <BODY>
- <script>
-    
- </script>
-
-   <div class="box">
-      <canvas id="pinkboard"></canvas>
-   </div>
-  <script>
-  /*
- * Settings
- */
-var settings = {
-  particles: {
-    length:   2000, // maximum amount of particles
-    duration:   2, // particle duration in sec
-    velocity: 100, // particle velocity in pixels/sec
-    effect: -1.3, // play with this for a nice effect
-    size:      13, // particle size in pixels
-  },
-};
-/*
- * RequestAnimationFrame polyfill by Erik Möller
- */
-(function(){var b=0;var c=["ms","moz","webkit","o"];for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){window.requestAnimationFrame=window[c[a]+"RequestAnimationFrame"];window.cancelAnimationFrame=window[c[a]+"CancelAnimationFrame"]||window[c[a]+"CancelRequestAnimationFrame"]}if(!window.requestAnimationFrame){window.requestAnimationFrame=function(h,e){var d=new Date().getTime();var f=Math.max(0,16-(d-b));var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}}if(!window.cancelAnimationFrame){window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());
-/*
- * Point class
- */
-var Point = (function() {
-  function Point(x, y) {
-    this.x = (typeof x !== 'undefined') ? x : 0;
-    this.y = (typeof y !== 'undefined') ? y : 0;
-  }
-  Point.prototype.clone = function() {
-    return new Point(this.x, this.y);
-  };
-  Point.prototype.length = function(length) {
-    if (typeof length == 'undefined')
-      return Math.sqrt(this.x * this.x + this.y * this.y);
-    this.normalize();
-    this.x *= length;
-    this.y *= length;
-    return this;
-  };
-  Point.prototype.normalize = function() {
-    var length = this.length();
-    this.x /= length;
-    this.y /= length;
-    return this;
-  };
-  return Point;
-})();
-/*
- * Particle class
- */
-var Particle = (function() {
-  function Particle() {
-    this.position = new Point();
-    this.velocity = new Point();
-    this.acceleration = new Point();
-    this.age = 0;
-  }
-  Particle.prototype.initialize = function(x, y, dx, dy) {
-    this.position.x = x;
-    this.position.y = y;
-    this.velocity.x = dx;
-    this.velocity.y = dy;
-    this.acceleration.x = dx * settings.particles.effect;
-    this.acceleration.y = dy * settings.particles.effect;
-    this.age = 0;
-  };
-  Particle.prototype.update = function(deltaTime) {
-    this.position.x += this.velocity.x * deltaTime;
-    this.position.y += this.velocity.y * deltaTime;
-    this.velocity.x += this.acceleration.x * deltaTime;
-    this.velocity.y += this.acceleration.y * deltaTime;
-    this.age += deltaTime;
-  };
-  Particle.prototype.draw = function(context, image) {
-    function ease(t) {
-      return (--t) * t * t + 1;
+    .logo{
+        margin-top: 20px;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
     }
-    var size = image.width * ease(this.age / settings.particles.duration);
-    context.globalAlpha = 1 - this.age / settings.particles.duration;
-    context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
-  };
-  return Particle;
-})();
-/*
- * ParticlePool class
- */
-var ParticlePool = (function() {
-  var particles,
-      firstActive = 0,
-      firstFree   = 0,
-      duration    = settings.particles.duration;
- 
-  function ParticlePool(length) {
-    // create and populate particle pool
-    particles = new Array(length);
-    for (var i = 0; i < particles.length; i++)
-      particles[i] = new Particle();
-  }
-  ParticlePool.prototype.add = function(x, y, dx, dy) {
-    particles[firstFree].initialize(x, y, dx, dy);
-   
-    // handle circular queue
-    firstFree++;
-    if (firstFree   == particles.length) firstFree   = 0;
-    if (firstActive == firstFree       ) firstActive++;
-    if (firstActive == particles.length) firstActive = 0;
-  };
-  ParticlePool.prototype.update = function(deltaTime) {
-    var i;
-   
-    // update active particles
-    if (firstActive < firstFree) {
-      for (i = firstActive; i < firstFree; i++)
-        particles[i].update(deltaTime);
-    }
-    if (firstFree < firstActive) {
-      for (i = firstActive; i < particles.length; i++)
-        particles[i].update(deltaTime);
-      for (i = 0; i < firstFree; i++)
-        particles[i].update(deltaTime);
-    }
-   
-    // remove inactive particles
-    while (particles[firstActive].age >= duration && firstActive != firstFree) {
-      firstActive++;
-      if (firstActive == particles.length) firstActive = 0;
-    }
-   
-   
-  };
-  ParticlePool.prototype.draw = function(context, image) {
-    // draw active particles
-    if (firstActive < firstFree) {
-      for (i = firstActive; i < firstFree; i++)
-        particles[i].draw(context, image);
-    }
-    if (firstFree < firstActive) {
-      for (i = firstActive; i < particles.length; i++)
-        particles[i].draw(context, image);
-      for (i = 0; i < firstFree; i++)
-        particles[i].draw(context, image);
-    }
-  };
-  return ParticlePool;
-})();
-/*
- * Putting it all together
- */
-(function(canvas) {
-  var context = canvas.getContext('2d'),
-      particles = new ParticlePool(settings.particles.length),
-      particleRate = settings.particles.length / settings.particles.duration, // particles/sec
-      time;
- 
-  // get point on heart with -PI <= t <= PI
-  function pointOnHeart(t) {
-    return new Point(
-      160 * Math.pow(Math.sin(t), 3),
-      130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
-    );
-  }
- 
-  // creating the particle image using a dummy canvas
-  var image = (function() {
-    var canvas  = document.createElement('canvas'),
-        context = canvas.getContext('2d');
-    canvas.width  = settings.particles.size;
-    canvas.height = settings.particles.size;
-    // helper function to create the path
-    function to(t) {
-      var point = pointOnHeart(t);
-      point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
-      point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
-      return point;
-    }
-    // create the path
-    context.beginPath();
-    var t = -Math.PI;
-    var point = to(t);
-    context.moveTo(point.x, point.y);
-    while (t < Math.PI) {
-      t += 0.01; // baby steps!
-      point = to(t);
-      context.lineTo(point.x, point.y);
-    }
-    context.closePath();
-    // create the fill
-    context.fillStyle = '#FF5CA4';
-    context.fill();
-    // create the image
-    var image = new Image();
-    image.src = canvas.toDataURL();
-    return image;
-  })();
- 
-  // render that thing!
-  function render() {
-    // next animation frame
-    requestAnimationFrame(render);
-   
-    // update time
-    var newTime   = new Date().getTime() / 1000,
-        deltaTime = newTime - (time || newTime);
-    time = newTime;
-   
-    // clear canvas
-    context.clearRect(0, 0, canvas.width, canvas.height);
-   
-    // create new particles
-    var amount = particleRate * deltaTime;
-    for (var i = 0; i < amount; i++) {
-      var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
-      var dir = pos.clone().length(settings.particles.velocity);
-      particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
-    }
-   
-    // update and draw particles
-    particles.update(deltaTime);
-    particles.draw(context, image);
-  }
- 
-  // handle (re-)sizing of the canvas
-  function onResize() {
-    canvas.width  = canvas.clientWidth;
-    canvas.height = canvas.clientHeight;
-  }
-  window.onresize = onResize;
- 
-  // delay rendering bootstrap
-  setTimeout(function() {
-    onResize();
-    render();
-  }, 10);
-})(document.getElementById('pinkboard'));
-  </script>
-  <script>
-
-    </script>
-  <div class="center-text",
-  style="background-color:rgb(0, 0, 0);
-        width: 100%;
-        color: rgb(225, 12, 168);
-        height:100%;
-        font-size: 31px;
-        font-style: italic;
+  
+    .food, .drink, .cake, .support, .account, .giohang{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 5px;
-        text-align: center;"></div>
- </BODY>
-</HTML>
+        font-size: 25px;
+        text-decoration: none;
+        color: #3c284b;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+    }
+    
+    .title{
+      
+       position: absolute;
+        top: 160px;
+        text-align: center;
+    }
+    .hotfood{
+        border-radius: 15px;
+        height: 1530px;
+        width: 1100px;
+        position: absolute;
+        top: 300px;
+        margin: 0 auto;
+        left: 50%;
+        margin-left: -550px;
+        background-color: rgba(245, 245, 245, 0.538);
+        box-shadow:0 0 25px #0c2333;
+    }
+    .hotfood img{
+          border-radius: 20px;
+          margin-left: 50px;
+    }
+    .hotdrink{
+        border-radius: 15px;
+        height: 1900px;
+        width: 1100px;
+        position: absolute;
+        top: 1900px;
+        left: 50%;
+        margin-left: -550px;
+        background-color: rgba(245, 245, 245, 0.538);
+        box-shadow:0 0 25px #0c2333;
+    }
+    .hotdrink img{
+          border-radius: 20px;
+          margin-left: 50px;
+    }
+    .hotcake{
+        border-radius: 15px; 
+        height: 2320px;
+        width: 1100px;
+        position: absolute;
+        top: 3900px;
+        left: 50%;
+        margin-left: -550px;
+        background-color: rgba(245, 245, 245, 0.538);
+        box-shadow:0 0 25px #0c2333;
+    }
+    .hotcake img{
+          border-radius: 20px;
+          margin-left: 50px;
+    }
+    .viewmore1, .viewmore2, .viewmore3 { 
+        border: 3px solid #3c284b; 
+        border-radius: 15px;
+        text-decoration: none; 
+        text-align: center;
+        display: inline-block; 
+        padding: 10px 20px;
+         margin: 0 auto;
+         height: auto;
+         width: 500px;
+         left: 50%;
+         margin-left: 250px;
+     }
+    .datTiec{
+        border: 3px solid #3c284b; 
+        border-radius: 15px;
+        text-decoration: none; 
+        text-align: center;
+        display: inline-block; 
+        padding: 10px 20px;   
+        height: auto;
+        width: 900px;
+        margin: 0 auto ;
+        position: absolute;
+        bottom: 200px;
+        left: 50%;
+        margin-left: -450px;
+    }
+   
+   .logoins{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    bottom: -10px;
+    left: 200px;
+   }
+   .logofb{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+   }
+   .phonelogo{
+    position: absolute;
+    bottom: 1px;
+    left: 400px;
+    width: 70px;
+    height: 70px;
+   }
+   .sdt{
+    position: absolute;
+    bottom: -40px;
+    left: 470px;
+    width: 70px;
+    height: 70px;
+   }
+   .ggmap{
+    position: absolute;
+    bottom: 0px;
+    left: 800px;
+    width: 70px;
+    height: 70px;
+   }
+   .diachi{
+    position: absolute;
+    bottom: -5px;
+    text-decoration: none;
+    font-size: 20px;
+    left: 870px;
+   }
+   .monan{
+        border: 5px solid #8f89b7;
+        background-color: #fec4b6; 
+        color: #3c284b;
+        font-size: 20px;
+        display: inline-block; 
+        border-radius: 50px;
+        text-align: center;
+        height: auto;
+        width: 900px;
+        left: 50%;
+        margin-left: 100px;
+        margin-bottom: 30px ;
+        margin-top: 10px;
+   }
+   .douong{
+        display: inline-block;
+        border: 5px solid #3376bc;
+        background-color: #0c2333; 
+        color: #91bbe5;
+        font-size: 20px;
+        margin: 20px 20px auto; 
+        border-radius: 50px;
+        text-align: center;
+        height: auto;
+        width: 900px;
+        left: 50%;
+        margin-left: 100px;
+        margin-bottom: 30px ;
+   }
+   .banh{
+        display: inline-block;
+        border: 5px solid #956ad6;
+        background-color: #eb93c0; 
+        color: #ebdfeb;
+        font-size: 20px;
+        margin: 20px 20px auto; 
+        border-radius: 50px;
+        text-align: center;
+        height: auto;
+        width: 900px;
+        left: 50%;
+        margin-left: 100px;
+        margin-bottom: 30px ;
+   }
+
+
+   .bg1{
+    width: 100%;
+    height: 1850px;
+    background-image: url(food-background.jpeg);
+    background-position: center;
+    background-repeat: repeat-y ;
+    background-size: 100%;
+    box-shadow: 0 0 200px #0c2333 ;  border-radius: 5px;
+
+   }
+   .bg2{
+    width: 100%;
+    height: 2000px;
+    background-image: url(nuoc-background.jpg);
+    background-position: center;
+    background-repeat: repeat ;
+    background-size: 100%;
+    position: absolute;
+    top: 1850px;;
+    box-shadow: 0 0 200px #0c2333 ;
+    border-radius: 5px;
+   }
+   .bg3{
+    width: 100%;
+    height: 2400px;
+    background-image: url(cake-background.jpg);
+    background-position: center;
+    background-repeat: repeat-y ;
+    background-size: 100%;
+    position: absolute;
+    top: 3850px;
+    box-shadow: 0 0 200px #0c2333 ;
+    border-radius: 5px;
+   }
+   .search{
+    background-color:#ffffffdd;
+    display: inline-block;
+    height: 50px;
+    width: 700px;
+    border-radius: 15px;
+    border: #f7f7f70f;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    margin-left: -350px ;
+   }
+   .nutSearch{
+    background-color:#ffffff00;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 180px;
+    left: 200px;
+    left: 72%;
+    border: none;
+    cursor: pointer;
+   }
+   .logosearch{
+    height: 55px;
+    width: 50px;
+    position: absolute;
+    top: 1px;
+    left: -5px;
+   }
+    </style>
+</head>
+<body>
+    
+    <input class="search" type="text">
+    <button class="nutSearch">
+        <img class="logosearch" src="logo-search.png" alt="">
+    </button> 
+   <div class="bg1"></div>
+   <div class="bg2"></div>
+   <div class="bg3"></div>
+    
+    
+
+   
+    <div class="hotfood">
+        <div class="monan"><h1>Món ăn</h1></div>
+        <img src="nhiumonan.jpeg" alt="">
+        <img src="comtam.webp" alt="">
+        <img src="pho.webp" alt="">
+        <img src="thitnuong.webp" alt="">
+        <img src="bundau.webp" alt="">
+        <img src="phalau.webp" alt="">
+        <div class="viewmore">
+        <a class="viewmore1" href="" target="_self"><h><b>View More</b></h></a>    
+        </div>
+
+    </div>
+    <div class="hotdrink">
+        <div class="douong"><h1>Đồ uống</h1></div>
+        <img src="douong.jpg" alt="">
+        <img src="rauma.webp" alt="">
+        <img src="tradau.webp" alt="">
+        <img src="nuocme.webp" alt="">
+        <img src="trãioai.webp" alt="">
+        <img src="tratraicay.webp" alt="">
+        <div class="viewmore">
+        <a class="viewmore2" href="" target="_self"><h><b>View More</b></h></a>    
+    </div>
+    </div>
+    <div class="hotcake">
+        <div class="banh"><h1>Bánh</h1></div>
+            <img style="height: auto; width: 1000px;" src="banhbao.png" alt="">
+            <img src="banhphap.jpg" alt="">
+            <img src="banhvalung.jpg" alt="">
+            <img src="mochi.jpg" alt="">
+            <div class="viewmore">
+            <a class="viewmore3" href="" target="_self"><h><b>View More</b></h></a>    
+            </div>
+    </div>
+    <div><a class="datTiec" href="" target="_self"><h1>ĐẶT TIỆC</h1></a></div>
+  
+<div class="last">
+    <a href="https://www.facebook.com/vankhanh.mai.5205">
+        <img class="logofb"  src="download-removebg-preview.png" alt="">
+    </a>
+    <a href="">
+        <img class="logoins"  src="camera-icon-simple-style-vector-removebg-preview (1).png" alt="">
+    </a>
+    <div >
+    <img class="phonelogo" src="phone-icon-telephone-icon-symbol-for-app-and-messenger-vector-removebg-preview.png" alt="">
+    <h1 class="sdt">
+        <b>0369164702</b>
+    </h1>
+    <a href="">
+        <img class="ggmap" src="ggmap.png" alt="">
+        <h1 class="diachi">Địa chỉ: <br> 342, Tân Phú, Tp.Hồ Chí Minh</h1>
+        
+    </a>
+</div>
+</div>
+
+    <div class="head">
+        <div class="head1">
+        <img class="logo" src="Logo.png" alt="Description of the image" onclick="refreshPage()">
+        <a class="food" href="http://127.0.0.1:5500/index2.html" target="_self">Đồ ăn</a>
+        <a class="drink" href="" target="_self">Đồ uống</a>
+        <a class="cake" href="" target="_self">Bánh</a>
+        <a class="support" href="" target="_self">Dịch vụ</a>
+        <a class="account" href="" target="_self">Tài Khoản</a>
+        <img class="giohang" src="giohang.png" alt="" onclick=" ">
+    </div>
+    </div>
+    <script> 
+    function refreshPage() 
+    { location.reload();} 
+    </script>
+</body>
+</html>

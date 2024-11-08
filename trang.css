@@ -1,39 +1,208 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: "Roboto Condensed";
+    line-height: 1.6;
+    height: 6600px; /* Đặt chiều cao lớn để tạo cuộn */
+    width: auto;
+    background: #C7D7FB;
+    
+    display: flex;
+    justify-items: center;
+    position: relative;
+    
 }
 
-.modal {
-    display: none; /* Ẩn modal mặc định */
+  
+.head{
+    height: 100px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.671);
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0); /* Black with opacity */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    box-shadow: 0 0 15px #5293c1;
+
+} 
+.head1{
+
+height: 100px;
+width: auto;
+display: flex; 
+justify-content: space-between;
+position: absolute;
+left: 70px;
+right: 70px;
+flex-wrap: nowrap;
+align-content: center;
+white-space: nowrap;
+}
+.food:hover {
+    color: #f1b0da;
+    text-decoration: underline;
+}
+.drink:hover {
+    color: #f1b0da;
+    text-decoration: underline;
+}
+.cake:hover {
+    color: #f1b0da;
+    text-decoration: underline;
+}
+.support:hover {
+    color: #f1b0da;
+    text-decoration: underline;
+}
+.account:hover {
+    color: #f1b0da;
+    text-decoration: underline;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% từ trên và centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Có thể điều chỉnh theo ý thích */
+.logo{
+margin-top: 20px;
+width: 150px;
+height: 50px;
+cursor: pointer;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.food, .drink, .cake, .support, .account, .giohang{
+display: flex;
+font-size: 25px;
+text-decoration: none;
+color: #3c284b;
+width: 60px;
+height: 60px;
+cursor: pointer;
+flex-wrap: nowrap;
+margin-top: 30px;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.background{
+background-color: rgba(233, 230, 230, 0.807);
+width: 1200px;
+height: 900px;
+
+margin: 300px auto;
+}
+.backgroundProduct{
+background-color: rgba(189, 186, 186, 0.677);
+width: 400px;
+height: 630px;
+margin: 100px 100px;
+border-radius: 20px;
+position: relative;
+align-items: center;
+transition: 0.5s;
+}
+.cart{
+font-size: 30px;
+width: 30px;
+height: 30px;
+position: absolute;
+left: 15px;
+top: 15px;
+}
+.cart:hover{
+cursor: pointer;
+}
+.product img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+    margin:  auto;   
+    transition: 0.5s;
+
+}
+.name{
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+}
+.prize{
+color: rgb(0, 80, 228);
+font-size: 40px;
+font-weight: bold;
+text-align: center;
+}
+.size, .color{
+
+width: 200px;
+height: 30px;
+display: flex;
+align-items: center;
+margin-left: 20px;
+margin-top: 10px ;
+}
+.size span{
+padding: 2px 5px;
+background-color: #a9c0f5;
+margin: 2px 5px ;
+border-radius: 15px;
+font-size: 15px;
+}
+
+.color span{
+height: 20px;
+width: 20px;
+border-radius: 50%;
+margin: 2px 5px ;
+}
+.action button{
+background-color: #C7D7FB;
+border-radius: 5px;
+border: none;
+outline: none;
+margin: 15px 10px;
+height: 30px;
+width: 100px;
+}
+.buy{
+position: absolute;
+right: 30px;
+
+}
+
+.size, .color, .action{
+opacity: 0;
+visibility: hidden;
+transition-delay:0.4s;
+transition: 0.1s;
+
+}
+.product img, .prize{
+transition: 0.5s;
+}
+.backgroundProduct:hover {
+transform: scale(1.2);
+transition: 0.5s;
+}
+.backgroundProduct:hover .product img{
+    width: 70%;
+    height: 70%;
+    object-fit: cover; 
+    display: block;
+    margin:  auto;   
+ 
+}
+.backgroundProduct:hover  .prize{
+color: rgb(0, 80, 228);
+font-size: 25px;
+font-weight: bold;
+text-align: center;
+
+}
+.backgroundProduct:hover .size, 
+.backgroundProduct:hover .color,
+.backgroundProduct:hover .action{
+opacity: 1;
+visibility: visible;
+transition: 0.5s;
+
+}
+.action button:hover{
+transform: scale(0.9);
+cursor: pointer;
+}
+.size, .color span:hover{
+cursor: pointer;
 }
