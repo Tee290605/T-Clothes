@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-items: center;
     position: relative;
+    transform: scale(1);
     
 }
 
@@ -77,21 +78,24 @@ margin-top: 30px;
 }
 
 .background{
-background-color: rgba(233, 230, 230, 0.807);
-width: 1200px;
+background-color: rgba(242, 237, 237, 0.807);
+width: 1600px;
+margin: 150px 80px;
 height: 900px;
 
-margin: 300px auto;
+display: flex;
+justify-content: space-evenly;
 }
 .backgroundProduct{
 background-color: rgba(189, 186, 186, 0.677);
-width: 400px;
-height: 630px;
-margin: 100px 100px;
+width: 17%;
+height: 370px;
+margin: 100px 10px;
 border-radius: 20px;
 position: relative;
 align-items: center;
 transition: 0.5s;
+
 }
 .cart{
 font-size: 30px;
@@ -105,8 +109,8 @@ top: 15px;
 cursor: pointer;
 }
 .product img{
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     display: block;
     margin:  auto;   
@@ -114,20 +118,20 @@ cursor: pointer;
 
 }
 .name{
-font-size: 30px;
+font-size: 20px;
 font-weight: bold;
 text-align: center;
 }
 .prize{
 color: rgb(0, 80, 228);
-font-size: 40px;
+font-size: 30px;
 font-weight: bold;
 text-align: center;
 }
 .size, .color{
 
 width: 200px;
-height: 30px;
+height: 20px;
 display: flex;
 align-items: center;
 margin-left: 20px;
@@ -138,7 +142,7 @@ padding: 2px 5px;
 background-color: #a9c0f5;
 margin: 2px 5px ;
 border-radius: 15px;
-font-size: 15px;
+font-size: 12px;
 }
 
 .color span{
@@ -146,6 +150,7 @@ height: 20px;
 width: 20px;
 border-radius: 50%;
 margin: 2px 5px ;
+font-size: 10px;
 }
 .action button{
 background-color: #C7D7FB;
@@ -154,7 +159,7 @@ border: none;
 outline: none;
 margin: 15px 10px;
 height: 30px;
-width: 100px;
+width: 50%px;
 }
 .buy{
 position: absolute;
@@ -177,8 +182,8 @@ transform: scale(1.2);
 transition: 0.5s;
 }
 .backgroundProduct:hover .product img{
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     object-fit: cover; 
     display: block;
     margin:  auto;   
@@ -186,7 +191,7 @@ transition: 0.5s;
 }
 .backgroundProduct:hover  .prize{
 color: rgb(0, 80, 228);
-font-size: 25px;
+font-size: 20px;
 font-weight: bold;
 text-align: center;
 
@@ -201,8 +206,13 @@ transition: 0.5s;
 }
 .action button:hover{
 transform: scale(0.9);
+box-shadow: 0 0 5px #5293c1;
 cursor: pointer;
 }
 .size, .color span:hover{
 cursor: pointer;
 }
+ .ao{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+ }

@@ -4,405 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeeFood</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            height: 6600px; /* Đặt chiều cao lớn để tạo cuộn */
-            width: auto;
-            background: #C7D7FB;
-            
-            display: flex;
-            justify-items: center;
-            position: relative;
-        }
-       
-          
-        .head{
-            height: 100px;
-            width: auto;
-            background-color: rgba(255, 255, 255, 0.419);
-            position: fixed;
-            top: 10px;
-            left: 20px;
-            right: 20px;
-            box-shadow: 0 0 15px #5293c1;
-
-        } 
-        .head1{
-  
-        height: 100px;
-        width: auto;
-        display: flex; 
-        justify-content: space-between;
-        position: absolute;
-        left: 70px;
-        right: 70px;
-        flex-wrap: nowrap;
-        align-content: center;
-        white-space: nowrap;
-        }
-        .food:hover {
-            color: #f1b0da;
-            text-decoration: underline;
-        }
-        .drink:hover {
-            color: #f1b0da;
-            text-decoration: underline;
-        }
-        .cake:hover {
-            color: #f1b0da;
-            text-decoration: underline;
-        }
-        .support:hover {
-            color: #f1b0da;
-            text-decoration: underline;
-        }
-        .account:hover {
-            color: #f1b0da;
-            text-decoration: underline;
-        }
-   
-    .logo{
-        margin-top: 20px;
-        width: 150px;
-        height: 50px;
-        cursor: pointer;
-    }
-  
-    .food, .drink, .cake, .support, .account, .giohang{
-        display: flex;
-        font-size: 25px;
-        text-decoration: none;
-        color: #3c284b;
-        width: 60px;
-        height: 60px;
-        cursor: pointer;
-        flex-wrap: nowrap;
-        margin-top: 30px;
-    }
-    
-    .title{
-      
-       position: absolute;
-        top: 160px;
-        text-align: center;
-    }
-    .hotfood{
-        border-radius: 15px;
-        height: 1530px;
-        width: 1100px;
-        position: absolute;
-        top: 300px;
-        margin: 0 auto;
-        left: 50%;
-        margin-left: -550px;
-        background-color: rgba(245, 245, 245, 0.538);
-        box-shadow:0 0 25px #0c2333;
-    }
-    .hotfood img{
-          border-radius: 20px;
-          margin-left: 50px;
-    }
-    .hotdrink{
-        border-radius: 15px;
-        height: 1900px;
-        width: 1100px;
-        position: absolute;
-        top: 1900px;
-        left: 50%;
-        margin-left: -550px;
-        background-color: rgba(245, 245, 245, 0.538);
-        box-shadow:0 0 25px #0c2333;
-    }
-    .hotdrink img{
-          border-radius: 20px;
-          margin-left: 50px;
-    }
-    .hotcake{
-        border-radius: 15px; 
-        height: 2320px;
-        width: 1100px;
-        position: absolute;
-        top: 3900px;
-        left: 50%;
-        margin-left: -550px;
-        background-color: rgba(245, 245, 245, 0.538);
-        box-shadow:0 0 25px #0c2333;
-    }
-    .hotcake img{
-          border-radius: 20px;
-          margin-left: 50px;
-    }
-    .viewmore1, .viewmore2, .viewmore3 { 
-        border: 3px solid #3c284b; 
-        border-radius: 15px;
-        text-decoration: none; 
-        text-align: center;
-        display: inline-block; 
-        padding: 10px 20px;
-         margin: 0 auto;
-         height: auto;
-         width: 500px;
-         left: 50%;
-         margin-left: 250px;
-     }
-    .datTiec{
-        border: 3px solid #3c284b; 
-        border-radius: 15px;
-        text-decoration: none; 
-        text-align: center;
-        display: inline-block; 
-        padding: 10px 20px;   
-        height: auto;
-        width: 900px;
-        margin: 0 auto ;
-        position: absolute;
-        bottom: 200px;
-        left: 50%;
-        margin-left: -450px;
-    }
-   
-   .logoins{
-    width: 90px;
-    height: 90px;
-    position: absolute;
-    bottom: -10px;
-    left: 200px;
-   }
-   .logofb{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-   }
-   .phonelogo{
-    position: absolute;
-    bottom: 1px;
-    left: 400px;
-    width: 70px;
-    height: 70px;
-   }
-   .sdt{
-    position: absolute;
-    bottom: -40px;
-    left: 470px;
-    width: 70px;
-    height: 70px;
-   }
-   .ggmap{
-    position: absolute;
-    bottom: 0px;
-    left: 800px;
-    width: 70px;
-    height: 70px;
-   }
-   .diachi{
-    position: absolute;
-    bottom: -5px;
-    text-decoration: none;
-    font-size: 20px;
-    left: 870px;
-   }
-   .monan{
-        border: 5px solid #8f89b7;
-        background-color: #fec4b6; 
-        color: #3c284b;
-        font-size: 20px;
-        display: inline-block; 
-        border-radius: 50px;
-        text-align: center;
-        height: auto;
-        width: 900px;
-        left: 50%;
-        margin-left: 100px;
-        margin-bottom: 30px ;
-        margin-top: 10px;
-   }
-   .douong{
-        display: inline-block;
-        border: 5px solid #3376bc;
-        background-color: #0c2333; 
-        color: #91bbe5;
-        font-size: 20px;
-        margin: 20px 20px auto; 
-        border-radius: 50px;
-        text-align: center;
-        height: auto;
-        width: 900px;
-        left: 50%;
-        margin-left: 100px;
-        margin-bottom: 30px ;
-   }
-   .banh{
-        display: inline-block;
-        border: 5px solid #956ad6;
-        background-color: #eb93c0; 
-        color: #ebdfeb;
-        font-size: 20px;
-        margin: 20px 20px auto; 
-        border-radius: 50px;
-        text-align: center;
-        height: auto;
-        width: 900px;
-        left: 50%;
-        margin-left: 100px;
-        margin-bottom: 30px ;
-   }
-
-
-   .bg1{
-    width: 100%;
-    height: 1850px;
-    background-image: url(food-background.jpeg);
-    background-position: center;
-    background-repeat: repeat-y ;
-    background-size: 100%;
-    box-shadow: 0 0 200px #0c2333 ;  border-radius: 5px;
-
-   }
-   .bg2{
-    width: 100%;
-    height: 2000px;
-    background-image: url(nuoc-background.jpg);
-    background-position: center;
-    background-repeat: repeat ;
-    background-size: 100%;
-    position: absolute;
-    top: 1850px;;
-    box-shadow: 0 0 200px #0c2333 ;
-    border-radius: 5px;
-   }
-   .bg3{
-    width: 100%;
-    height: 2400px;
-    background-image: url(cake-background.jpg);
-    background-position: center;
-    background-repeat: repeat-y ;
-    background-size: 100%;
-    position: absolute;
-    top: 3850px;
-    box-shadow: 0 0 200px #0c2333 ;
-    border-radius: 5px;
-   }
-   .search{
-    background-color:#ffffffdd;
-    display: inline-block;
-    height: 50px;
-    width: 700px;
-    border-radius: 15px;
-    border: #f7f7f70f;
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    margin-left: -350px ;
-   }
-   .nutSearch{
-    background-color:#ffffff00;
-    border-radius: 10px;
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 180px;
-    left: 200px;
-    left: 72%;
-    border: none;
-    cursor: pointer;
-   }
-   .logosearch{
-    height: 55px;
-    width: 50px;
-    position: absolute;
-    top: 1px;
-    left: -5px;
-   }
-    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="trang.css">
+<script src="trang.js"></script>
 </head>
-<body>
-    
-    <input class="search" type="text">
-    <button class="nutSearch">
-        <img class="logosearch" src="logo-search.png" alt="">
-    </button> 
-   <div class="bg1"></div>
-   <div class="bg2"></div>
-   <div class="bg3"></div>
-    
-    
 
-   
-    <div class="hotfood">
-        <div class="monan"><h1>Món ăn</h1></div>
-        <img src="nhiumonan.jpeg" alt="">
-        <img src="comtam.webp" alt="">
-        <img src="pho.webp" alt="">
-        <img src="thitnuong.webp" alt="">
-        <img src="bundau.webp" alt="">
-        <img src="phalau.webp" alt="">
-        <div class="viewmore">
-        <a class="viewmore1" href="" target="_self"><h><b>View More</b></h></a>    
+    <style>
+       
+    </style>
+    <body>
+
+        <div class="background">
+        <div class="backgroundProduct">
+            <div class="cart"><i class='bx bx-cart'></i></div>
+            <div class="product">
+        <img class="ao" src="1344447_màu_xám-removebg-preview.png" alt="" ">
+            </div>
+            <div class="name">Áo Khoác Kaki Chống Nắng </div>
+            <div class="prize">300.000</div>
+            <div class="size"> 
+                <h3>Size:</h3>
+                <span>M</span>
+                <span>L</span>
+                <span>X</span>
+                <span>XL</span>
+            </div>
+            <div class="color">
+                <h3 >Color:</h3>
+                <span class="colorblack" style="background-color: black;" onclick="changeImage('black')" ></span>
+                <span class="colorgrey" style="background-color: grey;" onclick="changeImage('grey')" ></span>
+            </div>
+            <div class="action">
+                <button class="addCart">Add cart</button>
+                <button class="buy">Buy now</button>
+            </div>
+        </div>
+        
+        <div class="backgroundProduct">
+            <div class="cart"><i class='bx bx-cart'></i></div>
+            <div class="product">
+        <img class="ao1" src="7ccec356-zoro-removebg-preview.png" alt="">
+            </div>
+            <div class="name">Áo Thun Onepiece </div>
+            <div class="prize">230.000</div>
+            <div class="size"> 
+                <h3>Size:</h3>
+                <span>M</span>
+                <span>L</span>
+                <span>X</span>
+                <span>XL</span>
+            </div>
+            <div class="color">
+                <h3 >Color:</h3>
+
+                <span class="colorblack" style="background-color: green;" onclick="changeImage1('green')" ></span>
+                <span class="colorblack" style="background-color: rgb(23, 5, 5);" onclick="changeImage1('black')" ></span>
+                <span class="colorblack" style="background-color: rgb(98, 53, 53);" onclick="changeImage1('brown')" ></span>
+                <span class="colorgrey" style="background-color: goldenrod;" onclick="changeImage1('yellow')" ></span>
+            </div>
+            <div class="action">
+                <button class="addCart">Add cart</button>
+                <button class="buy">Buy now</button>
+            </div>
         </div>
 
-    </div>
-    <div class="hotdrink">
-        <div class="douong"><h1>Đồ uống</h1></div>
-        <img src="douong.jpg" alt="">
-        <img src="rauma.webp" alt="">
-        <img src="tradau.webp" alt="">
-        <img src="nuocme.webp" alt="">
-        <img src="trãioai.webp" alt="">
-        <img src="tratraicay.webp" alt="">
-        <div class="viewmore">
-        <a class="viewmore2" href="" target="_self"><h><b>View More</b></h></a>    
-    </div>
-    </div>
-    <div class="hotcake">
-        <div class="banh"><h1>Bánh</h1></div>
-            <img style="height: auto; width: 1000px;" src="banhbao.png" alt="">
-            <img src="banhphap.jpg" alt="">
-            <img src="banhvalung.jpg" alt="">
-            <img src="mochi.jpg" alt="">
-            <div class="viewmore">
-            <a class="viewmore3" href="" target="_self"><h><b>View More</b></h></a>    
+        <div class="backgroundProduct">
+            <div class="cart"><i class='bx bx-cart'></i></div>
+            <div class="product">
+        <img class="ao2" src="c3bff584-xanhduong-removebg-preview.png" alt="" >
             </div>
-    </div>
-    <div><a class="datTiec" href="" target="_self"><h1>ĐẶT TIỆC</h1></a></div>
-  
-<div class="last">
-    <a href="https://www.facebook.com/vankhanh.mai.5205">
-        <img class="logofb"  src="download-removebg-preview.png" alt="">
-    </a>
-    <a href="">
-        <img class="logoins"  src="camera-icon-simple-style-vector-removebg-preview (1).png" alt="">
-    </a>
-    <div >
-    <img class="phonelogo" src="phone-icon-telephone-icon-symbol-for-app-and-messenger-vector-removebg-preview.png" alt="">
-    <h1 class="sdt">
-        <b>0369164702</b>
-    </h1>
-    <a href="">
-        <img class="ggmap" src="ggmap.png" alt="">
-        <h1 class="diachi">Địa chỉ: <br> 342, Tân Phú, Tp.Hồ Chí Minh</h1>
-        
-    </a>
-</div>
-</div>
+            <div class="name">Áo sơ mi</div>
+            <div class="prize">370.000</div>
+            <div class="size"> 
+                <h3>Size:</h3>
+                <span>M</span>
+                <span>L</span>
+                <span>X</span>
+                <span>XL</span>
+            </div>
+            <div class="color">
+                <h3 >Color:</h3>
+                <span class="colorblack" style="background-color: rgb(158, 221, 228);" onclick="changeImage2('blue')" ></span>
+                <span class="colorgrey" style="background-color: lightpink;" onclick="changeImage2('pink')" ></span>
+                <span class="colorgrey" style="background-color: beige;" onclick="changeImage2('beige')" ></span>
+            </div>
+            <div class="action">
+                <button class="addCart">Add cart</button>
+                <button class="buy">Buy now</button>
+            </div>
+        </div>
 
-    <div class="head">
-        <div class="head1">
-        <img class="logo" src="Logo.png" alt="Description of the image" onclick="refreshPage()">
-        <a class="food" href="http://127.0.0.1:5500/index2.html" target="_self">Đồ ăn</a>
-        <a class="drink" href="" target="_self">Đồ uống</a>
-        <a class="cake" href="" target="_self">Bánh</a>
-        <a class="support" href="" target="_self">Dịch vụ</a>
-        <a class="account" href="" target="_self">Tài Khoản</a>
-        <img class="giohang" src="giohang.png" alt="" onclick=" ">
+
+        <div class="backgroundProduct">
+            <div class="cart"><i class='bx bx-cart'></i></div>
+            <div class="product">
+        <img class="ao3" src="79942cee-xanhden-removebg-preview.png" alt="" onclick="zoom()">
+            </div>
+            <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+            <div class="prize">320.000</div>
+            <div class="size"> 
+                <h3>Size:</h3>
+                <span>M</span>
+                <span>L</span>
+                <span>X</span>
+                <span>XL</span>
+            </div>
+            <div class="color">
+                <h3 >Color:</h3>
+                <span class="colorblack" style="background-color: black;" onclick="changeImage3('black')" ></span>
+            </div>
+            <div class="action">
+                <button class="addCart">Add cart</button>
+                <button class="buy">Buy now</button>
+            </div>
+        </div>
+
+        <div class="backgroundProduct">
+            <div class="cart"><i class='bx bx-cart'></i></div>
+            <div class="product">
+        <img class="ao4" src="image-removebg-preview (2).png" alt="" onclick="zoom()">
+            </div>
+            <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+            <div class="prize">270.000</div>
+            <div class="size"> 
+                <h3>Size:</h3>
+                <span>M</span>
+                <span>L</span>
+                <span>X</span>
+                <span>XL</span>
+            </div>
+            <div class="color">
+                <h3 >Color:</h3>
+                <span class="colorblack" style="background-color: black;" onclick="changeImage4('black')" ></span>
+                <span class="colorgrey" style="background-color: white;" onclick="changeImage4('white')" ></span>
+                <span class="colorgrey" style="background-color: rgba(244, 205, 149, 0.967);" onclick="changeImage4('beige')" ></span>
+                <span class="colorgrey" style="background-color: grey;" onclick="changeImage4('grey')" ></span>
+            </div>
+            <div class="action">
+                <button class="addCart">Add cart</button>
+                <button class="buy">Buy now</button>
+            </div>
+        </div>
+
+
     </div>
-    </div>
-    <script> 
-    function refreshPage() 
-    { location.reload();} 
-    </script>
+
+        <div class="head">
+            <div class="head1">
+            <img class="logo" src="Logo.png" alt="Description of the image" onclick="refreshPage()">
+            <a class="food" href="" target="_self">Đồ ăn</a>
+            <a class="drink" href="" target="_self">Đồ uống</a>
+            <a class="cake" href="" target="_self">Bánh</a>
+            <a class="support" href="" target="_self">Dịch vụ</a>
+            <a class="account" href="" target="_self">Tài Khoản</a>
+            <img class="giohang" src="giohang.png" alt="" onclick=" ">
+        </div>
+        </div>
 </body>
+<script>
+    function changeImage(color){
+    const ao = document.getElementsByClassName('ao')[0];
+
+    if(color === 'black'){
+        ao.src = "1344447_màu_đen-removebg-preview.png";
+    } else if (color === 'grey'){
+        ao.src = "1344447_màu_xám-removebg-preview.png";
+    }
+}
+
+</script>
 </html>
