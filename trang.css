@@ -1,42 +1,36 @@
+
 body {
     font-family: "Roboto Condensed";
     line-height: 1.6;
     height: 6600px; /* Đặt chiều cao lớn để tạo cuộn */
-    width: auto;
-    background: #C7D7FB;
-    
-    display: flex;
-    justify-items: center;
+    width: 100%;
+    background: #d2dbdf;
+    display: inline-block;
+    justify-content: center;
     position: relative;
-    transform: scale(1);
-    
+
 }
 
-  
-.head{
-    height: 100px;
-    width: auto;
+.head {
+    position: fixed; /* Cố định phần tử đầu trang */
+    top: 0px;
+    height: 70px;
+    width: 1480px;
     background-color: rgba(255, 255, 255, 0.671);
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    right: 20px;
-    box-shadow: 0 0 15px #5293c1;
-
-} 
-.head1{
-
-height: 100px;
-width: auto;
-display: flex; 
-justify-content: space-between;
-position: absolute;
-left: 70px;
-right: 70px;
-flex-wrap: nowrap;
-align-content: center;
-white-space: nowrap;
+    margin: 0 auto; /* Căn giữa phần tử */
+    box-shadow: 0 0 5px #5293c1;
+    z-index: 10; /* Đảm bảo phần tử nổi lên trên */
+    align-content: center;
 }
+.head1 {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /*nội dung nằm trên 1 dòng */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+
 .food:hover {
     color: #f1b0da;
     text-decoration: underline;
@@ -59,13 +53,13 @@ white-space: nowrap;
 }
 
 .logo{
-margin-top: 20px;
-width: 150px;
-height: 50px;
-cursor: pointer;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+
 }
 
-.food, .drink, .cake, .support, .account, .giohang{
+.food, .drink, .cake, .support, .account{
 display: flex;
 font-size: 25px;
 text-decoration: none;
@@ -74,28 +68,43 @@ width: 60px;
 height: 60px;
 cursor: pointer;
 flex-wrap: nowrap;
-margin-top: 30px;
+margin-top: 5px;
 }
-
+.giohang{
+   font-size: 40px;
+   min-width: 60px; 
+   min-height: 40px;
+}
+.giohang:hover{
+    cursor: pointer;
+}
+.head1 a{
+ 
+    min-width: 100px;
+    min-height: 60px;
+}
 .background{
-background-color: rgba(242, 237, 237, 0.807);
-width: 1600px;
-margin: 150px 80px;
-height: 900px;
+background-color: #b7d4e2fd;
+width: 1500px;
+height: 600px;
+margin-top: 700px;
 
-display: flex;
-justify-content: space-evenly;
+position: relative;
+display: block;
+border-radius: 10px;
 }
 .backgroundProduct{
-background-color: rgba(189, 186, 186, 0.677);
+background-color: #78909c92;
 width: 17%;
 height: 370px;
-margin: 100px 10px;
+margin: 50px 10px;
 border-radius: 20px;
-position: relative;
 align-items: center;
 transition: 0.5s;
+}
 
+.backgroundProduct{
+    position: relative;
 }
 .cart{
 font-size: 30px;
@@ -144,7 +153,9 @@ margin: 2px 5px ;
 border-radius: 15px;
 font-size: 12px;
 }
-
+.size:hover, .size span:hover{
+    cursor: pointer;
+}
 .color span{
 height: 20px;
 width: 20px;
@@ -216,3 +227,158 @@ cursor: pointer;
     transition: transform 0.3s ease;
     cursor: pointer;
  }
+ .background{
+    position: relative;
+    overflow: hidden;
+ }
+ .bx-chevron-left{
+    position: absolute;
+    top: 50%;
+ }
+ .bx-chevron-right{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+ }
+.buttonSlider i{
+    background-color: #aad5f4be;
+    font-size: 50px;
+    height: 90px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px lightblue;
+
+}
+.buttonSlider i:hover{
+    cursor: pointer;
+}
+ .background{
+    position: relative;
+
+ }
+ .backgroundsliderContainer{
+    background-color: #3c284b;
+    position: absolute;
+    width: 1480px;
+    height: auto;
+    top: 50px;
+
+}
+
+.backgroundslider{
+position: absolute;
+width: 100%;
+height: 500px;
+display: inline-flex;
+justify-content: space-evenly;
+margin: 0px 0px;
+
+}
+.backgroundslider:nth-child(2){
+    transform: translateX(100%);
+} 
+.backgroundslider:nth-child(3){
+    transform: translateX(200%);
+} 
+.backgroundsliderContainer{
+    transition: all 0.3s ease;
+  
+}
+
+
+.titleSeller{
+    color: #3c284b;
+    position: absolute;
+    top: 0px;
+    left: 45%; 
+}
+/*------------------QUAN-------------*/
+.background1{
+    background-color: #b7d4e2fd;
+    width: 1500px;
+    height: 600px;
+    margin: 100px 10px;
+    position: relative;
+    display: block;
+    border-radius: 10px;
+}
+
+.buttonSlider1 i{
+    background-color: #aad5f4be;
+    font-size: 50px;
+    height: 90px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px lightblue;
+} 
+.buttonSlider1 i:hover{
+    cursor: pointer;
+}
+.giohang{
+    position: relative;
+}
+.soluong{
+    background-color: #a9c0f59b;
+    color: red;
+    border-radius: 5%;
+    font-size: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 10px;
+    right: 5px;
+    width: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+.imgTopSlider{
+    display: inline;
+    background-color: #3c284b;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 0px;
+}
+.imgTop{
+    display: flex;
+    position: absolute;
+    width: 1500px;
+    height: auto;
+}
+.imgTopSlider{
+    position: relative;
+    overflow: hidden;
+}
+.imgTop img{
+position: absolute;
+width: 1520px;
+height: 700px;
+display: flex;
+object-fit: cover;
+} 
+.imgTop img:nth-child(2){
+    transform: translateX(100%);
+}
+.imgTop img:nth-child(3){
+    transform: translateX(200%);
+}
+.titleTop{
+    font-family: "Bebas Neue";
+    font-size: 160px;
+    width: 900px;
+    position: absolute;
+    z-index: 10;
+    background-color: #3c284b9e;
+    color: #a9c0f5;
+    border-radius: 15px;
+    display: inline-flex;
+    margin: 200px 20%;
+    text-align: center;
+    display: inline-block; 
+}
+.imgTopSlider{
+    transition: all 0.7s ease;
+}

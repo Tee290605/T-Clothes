@@ -1,179 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeeFood</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="trang.css">
-<script src="trang.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TeeClothes</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="trang.css">
+        <script src="trang.js"></script>
+    </head>
 
     <style>
        
     </style>
     <body>
-
-        <div class="background">
-        <div class="backgroundProduct">
-            <div class="cart"><i class='bx bx-cart'></i></div>
-            <div class="product">
-        <img class="ao" src="1344447_màu_xám-removebg-preview.png" alt="" ">
-            </div>
-            <div class="name">Áo Khoác Kaki Chống Nắng </div>
-            <div class="prize">300.000</div>
-            <div class="size"> 
-                <h3>Size:</h3>
-                <span>M</span>
-                <span>L</span>
-                <span>X</span>
-                <span>XL</span>
-            </div>
-            <div class="color">
-                <h3 >Color:</h3>
-                <span class="colorblack" style="background-color: black;" onclick="changeImage('black')" ></span>
-                <span class="colorgrey" style="background-color: grey;" onclick="changeImage('grey')" ></span>
-            </div>
-            <div class="action">
-                <button class="addCart">Add cart</button>
-                <button class="buy">Buy now</button>
+        <span class="titleTop"> T-Clothes</span>
+        <div class="imgTopSlider">
+            <div class="imgTop">
+                <img src="imgTop/DALL·E 2024-11-11 16.44.02 - A youthful and trendy collection of fashion product images, including stylish clothing items like jeans, T-shirts, jackets, and accessories such as a .webp" alt="">
+                <img src="imgTop/DALL·E 2024-11-11 16.44.51 - Five images of fashion products like pants, shirts, and backpacks, displayed in a stylish, minimalistic way, featuring various colors and designs. The.webp" alt="">
+                <img src="imgTop/DALL·E 2024-11-11 16.43.59 - A collection of five stylish fashion product images including clothing items like pants, shirts, and accessories like backpacks, arranged in a modern .webp" alt="">
             </div>
         </div>
         
-        <div class="backgroundProduct">
-            <div class="cart"><i class='bx bx-cart'></i></div>
-            <div class="product">
-        <img class="ao1" src="7ccec356-zoro-removebg-preview.png" alt="">
-            </div>
-            <div class="name">Áo Thun Onepiece </div>
-            <div class="prize">230.000</div>
-            <div class="size"> 
-                <h3>Size:</h3>
-                <span>M</span>
-                <span>L</span>
-                <span>X</span>
-                <span>XL</span>
-            </div>
-            <div class="color">
-                <h3 >Color:</h3>
+        <div class="background">
+            <div class="backgroundsliderContainer">
+              <div class="backgroundslider">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="1344447_màu_xám-removebg-preview.png">
+                        </div>
+                        <div class="name">Áo Khoác Kaki Chống Nắng </div>
+                        <div class="prize">300.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage('black')"></span>
+                            <span class="colorgrey"
+                                style="background-color: grey;"
+                                onclick="changeImage('grey')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
 
-                <span class="colorblack" style="background-color: green;" onclick="changeImage1('green')" ></span>
-                <span class="colorblack" style="background-color: rgb(23, 5, 5);" onclick="changeImage1('black')" ></span>
-                <span class="colorblack" style="background-color: rgb(98, 53, 53);" onclick="changeImage1('brown')" ></span>
-                <span class="colorgrey" style="background-color: goldenrod;" onclick="changeImage1('yellow')" ></span>
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="7ccec356-zoro-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Áo Thun Onepiece </div>
+                        <div class="prize">230.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="colorblack"
+                                style="background-color: green;"
+                                onclick="changeImage1('green')"></span>
+                            <span class="colorblack"
+                                style="background-color: rgb(23, 5, 5);"
+                                onclick="changeImage1('black')"></span>
+                            <span class="colorblack"
+                                style="background-color: rgb(98, 53, 53);"
+                                onclick="changeImage1('brown')"></span>
+                            <span class="colorgrey"
+                                style="background-color: goldenrod;"
+                                onclick="changeImage1('yellow')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="c3bff584-xanhduong-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Áo sơ mi</div>
+                        <div class="prize">370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: rgb(158, 221, 228);"
+                                onclick="changeImage2('blue')"></span>
+                            <span class="colorgrey"
+                                style="background-color: lightpink;"
+                                onclick="changeImage2('pink')"></span>
+                            <span class="colorgrey"
+                                style="background-color: beige;"
+                                onclick="changeImage2('beige')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="79942cee-xanhden-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+                        <div class="prize">320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage3('black')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="image-removebg-preview (2).png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+                        <div class="prize">270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage4('black')"></span>
+                            <span class="colorgrey"
+                                style="background-color: white;"
+                                onclick="changeImage4('white')"></span>
+                            <span class="colorgrey"
+                                style="background-color: rgba(244, 205, 149, 0.967);"
+                                onclick="changeImage4('beige')"></span>
+                            <span class="colorgrey"
+                                style="background-color: grey;"
+                                onclick="changeImage4('grey')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="backgroundslider">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="1344447_màu_xám-removebg-preview.png" >
+                        </div>
+                        <div class="name">Áo Khoác Kaki Chống Nắng </div>
+                        <div class="prize">300.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage('black')"></span>
+                            <span class="colorgrey"
+                                style="background-color: grey;"
+                                onclick="changeImage('grey')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="7ccec356-zoro-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Áo Thun Onepiece </div>
+                        <div class="prize">230.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="colorblack"
+                                style="background-color: green;"
+                                onclick="changeImage1('green')"></span>
+                            <span class="colorblack"
+                                style="background-color: rgb(23, 5, 5);"
+                                onclick="changeImage1('black')"></span>
+                            <span class="colorblack"
+                                style="background-color: rgb(98, 53, 53);"
+                                onclick="changeImage1('brown')"></span>
+                            <span class="colorgrey"
+                                style="background-color: goldenrod;"
+                                onclick="changeImage1('yellow')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="c3bff584-xanhduong-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Áo sơ mi</div>
+                        <div class="prize">370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: rgb(158, 221, 228);"
+                                onclick="changeImage2('blue')"></span>
+                            <span class="colorgrey"
+                                style="background-color: lightpink;"
+                                onclick="changeImage2('pink')"></span>
+                            <span class="colorgrey"
+                                style="background-color: beige;"
+                                onclick="changeImage2('beige')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="79942cee-xanhden-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+                        <div class="prize">320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage3('black')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="image-removebg-preview (2).png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+                        <div class="prize">270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage4('black')"></span>
+                            <span class="colorgrey"
+                                style="background-color: white;"
+                                onclick="changeImage4('white')"></span>
+                            <span class="colorgrey"
+                                style="background-color: rgba(244, 205, 149, 0.967);"
+                                onclick="changeImage4('beige')"></span>
+                            <span class="colorgrey"
+                                style="background-color: grey;"
+                                onclick="changeImage4('grey')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div> 
+                <div class="backgroundslider">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="1344447_màu_xám-removebg-preview.png" >
+                        </div>
+                        <div class="name">Áo Khoác Kaki Chống Nắng </div>
+                        <div class="prize">300.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage('black')"></span>
+                            <span class="colorgrey"
+                                style="background-color: grey;"
+                                onclick="changeImage('grey')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="7ccec356-zoro-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Áo Thun Onepiece </div>
+                        <div class="prize">230.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="colorblack"
+                                style="background-color: green;"
+                                onclick="changeImage1('green')"></span>
+                            <span class="colorblack"
+                                style="background-color: rgb(23, 5, 5);"
+                                onclick="changeImage1('black')"></span>
+                            <span class="colorblack"
+                                style="background-color: rgb(98, 53, 53);"
+                                onclick="changeImage1('brown')"></span>
+                            <span class="colorgrey"
+                                style="background-color: goldenrod;"
+                                onclick="changeImage1('yellow')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="c3bff584-xanhduong-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Áo sơ mi</div>
+                        <div class="prize">370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: rgb(158, 221, 228);"
+                                onclick="changeImage2('blue')"></span>
+                            <span class="colorgrey"
+                                style="background-color: lightpink;"
+                                onclick="changeImage2('pink')"></span>
+                            <span class="colorgrey"
+                                style="background-color: beige;"
+                                onclick="changeImage2('beige')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="79942cee-xanhden-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+                        <div class="prize">320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage3('black')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="image-removebg-preview (2).png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
+                        <div class="prize">270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span>M</span>
+                            <span>L</span>
+                            <span>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="colorblack"
+                                style="background-color: black;"
+                                onclick="changeImage4('black')"></span>
+                            <span class="colorgrey"
+                                style="background-color: white;"
+                                onclick="changeImage4('white')"></span>
+                            <span class="colorgrey"
+                                style="background-color: rgba(244, 205, 149, 0.967);"
+                                onclick="changeImage4('beige')"></span>
+                            <span class="colorgrey"
+                                style="background-color: grey;"
+                                onclick="changeImage4('grey')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div> 
             </div>
-            <div class="action">
-                <button class="addCart">Add cart</button>
-                <button class="buy">Buy now</button>
+      
+            <div class="buttonSlider">
+                <i class='bx bx-chevron-left' ></i>
+                <i class='bx bx-chevron-right'></i>
+            </div>
+            <div class="titleSeller"><h1>Áo T-Clothes</h1></div>   
+
+       
+        </div>
+        
+        <div class="background1">
+
+            <div class="buttonSlider1">
+                <i class='bx bx-chevron-left' ></i>
+                <i class='bx bx-chevron-right'></i>
             </div>
         </div>
 
-        <div class="backgroundProduct">
-            <div class="cart"><i class='bx bx-cart'></i></div>
-            <div class="product">
-        <img class="ao2" src="c3bff584-xanhduong-removebg-preview.png" alt="" >
-            </div>
-            <div class="name">Áo sơ mi</div>
-            <div class="prize">370.000</div>
-            <div class="size"> 
-                <h3>Size:</h3>
-                <span>M</span>
-                <span>L</span>
-                <span>X</span>
-                <span>XL</span>
-            </div>
-            <div class="color">
-                <h3 >Color:</h3>
-                <span class="colorblack" style="background-color: rgb(158, 221, 228);" onclick="changeImage2('blue')" ></span>
-                <span class="colorgrey" style="background-color: lightpink;" onclick="changeImage2('pink')" ></span>
-                <span class="colorgrey" style="background-color: beige;" onclick="changeImage2('beige')" ></span>
-            </div>
-            <div class="action">
-                <button class="addCart">Add cart</button>
-                <button class="buy">Buy now</button>
-            </div>
-        </div>
-
-
-        <div class="backgroundProduct">
-            <div class="cart"><i class='bx bx-cart'></i></div>
-            <div class="product">
-        <img class="ao3" src="79942cee-xanhden-removebg-preview.png" alt="" onclick="zoom()">
-            </div>
-            <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
-            <div class="prize">320.000</div>
-            <div class="size"> 
-                <h3>Size:</h3>
-                <span>M</span>
-                <span>L</span>
-                <span>X</span>
-                <span>XL</span>
-            </div>
-            <div class="color">
-                <h3 >Color:</h3>
-                <span class="colorblack" style="background-color: black;" onclick="changeImage3('black')" ></span>
-            </div>
-            <div class="action">
-                <button class="addCart">Add cart</button>
-                <button class="buy">Buy now</button>
-            </div>
-        </div>
-
-        <div class="backgroundProduct">
-            <div class="cart"><i class='bx bx-cart'></i></div>
-            <div class="product">
-        <img class="ao4" src="image-removebg-preview (2).png" alt="" onclick="zoom()">
-            </div>
-            <div class="name">Áo Polo Cổ Bẻ Tay Ngắn</div>
-            <div class="prize">270.000</div>
-            <div class="size"> 
-                <h3>Size:</h3>
-                <span>M</span>
-                <span>L</span>
-                <span>X</span>
-                <span>XL</span>
-            </div>
-            <div class="color">
-                <h3 >Color:</h3>
-                <span class="colorblack" style="background-color: black;" onclick="changeImage4('black')" ></span>
-                <span class="colorgrey" style="background-color: white;" onclick="changeImage4('white')" ></span>
-                <span class="colorgrey" style="background-color: rgba(244, 205, 149, 0.967);" onclick="changeImage4('beige')" ></span>
-                <span class="colorgrey" style="background-color: grey;" onclick="changeImage4('grey')" ></span>
-            </div>
-            <div class="action">
-                <button class="addCart">Add cart</button>
-                <button class="buy">Buy now</button>
-            </div>
-        </div>
-
-
-    </div>
-
-        <div class="head">
-            <div class="head1">
-            <img class="logo" src="Logo.png" alt="Description of the image" onclick="refreshPage()">
-            <a class="food" href="" target="_self">Đồ ăn</a>
-            <a class="drink" href="" target="_self">Đồ uống</a>
-            <a class="cake" href="" target="_self">Bánh</a>
-            <a class="support" href="" target="_self">Dịch vụ</a>
-            <a class="account" href="" target="_self">Tài Khoản</a>
-            <img class="giohang" src="giohang.png" alt="" onclick=" ">
-        </div>
-        </div>
-</body>
-<script>
-    function changeImage(color){
-    const ao = document.getElementsByClassName('ao')[0];
-
-    if(color === 'black'){
-        ao.src = "1344447_màu_đen-removebg-preview.png";
-    } else if (color === 'grey'){
-        ao.src = "1344447_màu_xám-removebg-preview.png";
-    }
-}
-
-</script>
-</html>
+                <div class="head">
+                    <div class="head1">
+                        <img class="logo" src="Logo.png"
+                            alt="Description of the image"
+                            onclick="refreshPage()">
+                        <a class="food" href target="_self">Áo</a>
+                        <a class="drink" href target="_self">Quần</a>
+                        <a class="cake" href target="_self">Giày</a>
+                        <a class="support" href target="_self">Mắt kính</a>
+                        <a class="account" href target="_self">Balo</a>
+                        <div class="giohang" onclick=" "><i class='bx bxs-cart' >
+                            <div class="soluong">0</div>
+                        </i>
+                        <div class="menuBuy">
+                            <div></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+           
+        </html>

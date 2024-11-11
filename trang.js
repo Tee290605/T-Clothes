@@ -55,3 +55,74 @@ function changeImage4(color4) {
         }
     }
 }
+//button left-right
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const buttonright = document.querySelector('.bx-chevron-right');
+    const buttonleft = document.querySelector('.bx-chevron-left');
+    let index = 0;
+    const lengthSlider = document.querySelectorAll('.backgroundslider').length;
+  
+    if (buttonright) {
+        buttonright.addEventListener('click', function() {
+            index += 1;
+            if (index === lengthSlider) {
+                index = 0;
+            }
+            document.querySelector('.backgroundsliderContainer').style.right = index * 100 + "%";
+        });
+    }
+  
+    if (buttonleft) {
+        buttonleft.addEventListener('click', function() {
+            index -= 1;
+            if (index < 0) {
+                index = lengthSlider - 1;
+            }
+            document.querySelector('.backgroundsliderContainer').style.right = index * 100 + "%";
+        });
+    }
+  
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const colors = document.querySelectorAll('.color span');
+    let temp = 0;
+    colors.forEach(function(color, index) {
+        color.addEventListener('click', function() {
+            
+            
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded",function(){
+    let num = 0;
+   document.querySelectorAll('.addCart').forEach(function(clickAddCart){
+    clickAddCart.addEventListener('click',function(){
+        num +=1;
+        document.querySelector(".soluong").innerHTML = num;
+    })
+   })
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    const imgTop = document.querySelectorAll('.imgTop img');  // Chọn tất cả các phần tử
+    let top = 0;
+
+    function moveSlider() {
+        top += 1;  
+    if(top > imgTop.length-1){
+        top = 0;
+  
+    } 
+    document.querySelector('.imgTopSlider').style.right = top*100 + '%';
+    }
+    setInterval(moveSlider, 5000);
+});
+
+
