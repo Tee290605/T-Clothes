@@ -86,28 +86,141 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector('.backgroundsliderContainer').style.right = index * 100 + "%";
         });
     }
+  //-----------------------------------------------------------------------------
+    const buttonright1 = document.querySelector('.bx-chevron-right-1');
+    const buttonleft1 = document.querySelector('.bx-chevron-left-1');
+    let index1 = 0;
+    const lengthSlider1 = document.querySelectorAll('.backgroundslider1').length;
   
+    if (buttonright1) {
+        buttonright1.addEventListener('click', function() {
+            index1 += 1;
+            if (index1 === lengthSlider1) {
+                index1 = 0;
+            }
+            document.querySelector('.backgroundsliderContainer1').style.right = index1 * 100 + "%";
+        });
+    }
+  
+    if (buttonleft1) {
+        buttonleft1.addEventListener('click', function() {
+            index1 -= 1;
+            if (index1 < 0) {
+                index1 = lengthSlider1 - 1;
+            }
+            document.querySelector('.backgroundsliderContainer1').style.right = index1 * 100 + "%";
+        });
+    }
+  //-------------------------------------------------------------------------------------
+    const buttonright2 = document.querySelector('.bx-chevron-right-2');
+    const buttonleft2 = document.querySelector('.bx-chevron-left-2');
+    let index2 = 0;
+    const lengthSlider2 = document.querySelectorAll('.backgroundslider2').length;
+  
+    if (buttonright2) {
+        buttonright2.addEventListener('click', function() {
+            index2 += 1;
+            if (index2 === lengthSlider2) {
+                index2 = 0;
+            }
+            document.querySelector('.backgroundsliderContainer2').style.right = index2 * 100 + "%";
+        });
+    }
+  
+    if (buttonleft2) {
+        buttonleft2.addEventListener('click', function() {
+            index2 -= 1;
+            if (index2 < 0) {
+                index2 = lengthSlider2 - 1;
+            }
+            document.querySelector('.backgroundsliderContainer2').style.right = index2 * 100 + "%";
+        });
+    }
+
+    //-------------------------------------------------------------
+    const buttonright3 = document.querySelector('.bx-chevron-right-3');
+    const buttonleft3 = document.querySelector('.bx-chevron-left-3');
+    let index3 = 0;
+    const lengthSlider3 = document.querySelectorAll('.backgroundslider3').length;
+  
+    if (buttonright3) {
+        buttonright3.addEventListener('click', function() {
+            index3 += 1;
+            if (index3 === lengthSlider3) {
+                index3 = 0;
+            }
+            document.querySelector('.backgroundsliderContainer3').style.right = index3 * 100 + "%";
+        });
+    }
+  
+    if (buttonleft3) {
+        buttonleft3.addEventListener('click', function() {
+            index3 -= 1;
+            if (index3 < 0) {
+                index3 = lengthSlider3 - 1;
+            }
+            document.querySelector('.backgroundsliderContainer3').style.right = index2 * 100 + "%";
+        });
+    }
 });
 
+// Tô border cho color và size:
+// Bước đầu tiên hết phải duyệt qua mảng Cha mới có thể click cho 'Con'
+// Khi dùng function nhớ truyền "THAM SÔ" để nó hoạt động
+//-------mỗi khi DUYỆT phải TRUYỀN 'tham số' và dùng tham số 'đó' để làm việc
+//------ HÀNH ĐỘNG thì KHÔNG TRUYỀN, dùng tham số 'CHA' để làm
+// 1 lần click gồm 2 giai đoạn:
+// Đầu tiên xóa tất cả border của span  VÀ  sau đó là thêm border
 document.addEventListener("DOMContentLoaded", function() {
     const colors = document.querySelectorAll('.color span');
-    let temp = 0;
-    colors.forEach(function(color, index) {
-        color.addEventListener('click', function() {
+    colors.forEach(function(color) {//THAM SỐ
+
+        color.addEventListener('click', function() {//duyệt mảng
             
+             colors.forEach(function(removeColor){// phải truyền tham số để xóa border
+
+                removeColor.style.border = 'none';// xóa tất cả border của span
+             })
+
+        color.style.border = "2px solid red";// thêm màu border cho span
+        })
             
-        });
     });
+    
+    
+    const sizes =  document.querySelectorAll('.size span');
+    sizes.forEach(function(size){//THAM SỐ
+
+        size.addEventListener('click',function(){
+            const nameSize = size.getAttribute('sizeName')
+            console.log(nameSize);
+            sizes.forEach(function(removeSize){// phải truyền tham số để xóa border
+
+                removeSize.style.border = 'none'; // tất cả border
+            })
+
+        size.style.border = '2px solid red'; // border-color cho phần tử được chọn
+        })
+    })
+
+    const bgProduct = document.querySelectorAll('.backgroundProduct div');
+    bgProduct.forEach(function(bgProducts){
+
+        bgProducts.addEventListener('click',function(){
+        bgProduct.forEach(function(product){
+
+            product.style.border = 'none';
+        })
+          
+    })
+    })
+   
 });
 
+
+
 document.addEventListener("DOMContentLoaded",function(){
-    let num = 0;
-   document.querySelectorAll('.addCart').forEach(function(clickAddCart){
-    clickAddCart.addEventListener('click',function(){
-        num +=1;
-        document.querySelector(".soluong").innerHTML = num;
-    })
-   })
+   
 })
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -125,4 +238,21 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(moveSlider, 5000);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    let num = 0;
+  const numCart = document.querySelectorAll('.addCart');
+  const soLuong = document.querySelector('.soluong')
+  const addContainer = document.querySelector('.giohangSilder')
+  numCart.forEach(function(clickCart){
 
+        clickCart.addEventListener('click',function(){
+                num+=1;
+                soLuong.innerHTML = num;
+            const newDivCart = document.createElement("div")
+            newDivCart.textContent = "Sản phẩm được thêm vào giỏ hàng thứ "+ num; 
+            newDivCart.classList.add("cartProduct")
+           
+            addContainer.appendChild(newDivCart);
+        })
+  })
+});

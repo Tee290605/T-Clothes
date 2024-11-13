@@ -4,8 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TeeClothes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
             rel='stylesheet'>
+            <link rel="stylesheet" href="https://www.flaticon.com/">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -23,7 +25,10 @@
        
     </style>
     <body>
+
+        
         <span class="titleTop"> T-Clothes</span>
+        
         <div class="imgTopSlider">
             <div class="imgTop">
                 <img src="imgTop/DALL·E 2024-11-11 16.44.02 - A youthful and trendy collection of fashion product images, including stylish clothing items like jeans, T-shirts, jackets, and accessories such as a .webp" alt="">
@@ -34,7 +39,7 @@
         
         <div class="background">
             <div class="backgroundsliderContainer">
-              <div class="backgroundslider">
+                <div class="backgroundslider">
                     <div class="backgroundProduct">
                         <div class="cart"><i class='bx bx-cart'></i></div>
                         <div class="product">
@@ -45,17 +50,17 @@
                         <div class="prize">300.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span sizeName="'XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage('black')"></span>
-                            <span class="colorgrey"
+                            <span class="grey"
                                 style="background-color: grey;"
                                 onclick="changeImage('grey')"></span>
                         </div>
@@ -75,24 +80,24 @@
                         <div class="prize">230.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
                             <span>XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
 
-                            <span class="colorblack"
+                            <span class="green"
                                 style="background-color: green;"
                                 onclick="changeImage1('green')"></span>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: rgb(23, 5, 5);"
                                 onclick="changeImage1('black')"></span>
-                            <span class="colorblack"
+                            <span class="brown"
                                 style="background-color: rgb(98, 53, 53);"
                                 onclick="changeImage1('brown')"></span>
-                            <span class="colorgrey"
+                            <span class="yellow"
                                 style="background-color: goldenrod;"
                                 onclick="changeImage1('yellow')"></span>
                         </div>
@@ -113,20 +118,20 @@
                         <div class="prize">370.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="lightblue"
                                 style="background-color: rgb(158, 221, 228);"
                                 onclick="changeImage2('blue')"></span>
-                            <span class="colorgrey"
+                            <span class="pink"
                                 style="background-color: lightpink;"
                                 onclick="changeImage2('pink')"></span>
-                            <span class="colorgrey"
+                            <span class="beige"
                                 style="background-color: beige;"
                                 onclick="changeImage2('beige')"></span>
                         </div>
@@ -147,14 +152,14 @@
                         <div class="prize">320.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage3('black')"></span>
                         </div>
@@ -175,23 +180,23 @@
                         <div class="prize">270.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage4('black')"></span>
-                            <span class="colorgrey"
+                            <span class="white"
                                 style="background-color: white;"
                                 onclick="changeImage4('white')"></span>
-                            <span class="colorgrey"
+                            <span class="beige"
                                 style="background-color: rgba(244, 205, 149, 0.967);"
                                 onclick="changeImage4('beige')"></span>
-                            <span class="colorgrey"
+                            <span class="grey"
                                 style="background-color: grey;"
                                 onclick="changeImage4('grey')"></span>
                         </div>
@@ -207,23 +212,23 @@
                         <div class="cart"><i class='bx bx-cart'></i></div>
                         <div class="product">
                             <img class="ao"
-                                src="1344447_màu_xám-removebg-preview.png" >
+                                src="1344447_màu_xám-removebg-preview.png">
                         </div>
                         <div class="name">Áo Khoác Kaki Chống Nắng </div>
                         <div class="prize">300.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span sizeName="'XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage('black')"></span>
-                            <span class="colorgrey"
+                            <span class="grey"
                                 style="background-color: grey;"
                                 onclick="changeImage('grey')"></span>
                         </div>
@@ -243,24 +248,24 @@
                         <div class="prize">230.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
                             <span>XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
 
-                            <span class="colorblack"
+                            <span class="green"
                                 style="background-color: green;"
                                 onclick="changeImage1('green')"></span>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: rgb(23, 5, 5);"
                                 onclick="changeImage1('black')"></span>
-                            <span class="colorblack"
+                            <span class="brown"
                                 style="background-color: rgb(98, 53, 53);"
                                 onclick="changeImage1('brown')"></span>
-                            <span class="colorgrey"
+                            <span class="yellow"
                                 style="background-color: goldenrod;"
                                 onclick="changeImage1('yellow')"></span>
                         </div>
@@ -281,20 +286,20 @@
                         <div class="prize">370.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="lightblue"
                                 style="background-color: rgb(158, 221, 228);"
                                 onclick="changeImage2('blue')"></span>
-                            <span class="colorgrey"
+                            <span class="pink"
                                 style="background-color: lightpink;"
                                 onclick="changeImage2('pink')"></span>
-                            <span class="colorgrey"
+                            <span class="beige"
                                 style="background-color: beige;"
                                 onclick="changeImage2('beige')"></span>
                         </div>
@@ -315,14 +320,14 @@
                         <div class="prize">320.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage3('black')"></span>
                         </div>
@@ -343,23 +348,23 @@
                         <div class="prize">270.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage4('black')"></span>
-                            <span class="colorgrey"
+                            <span class="white"
                                 style="background-color: white;"
                                 onclick="changeImage4('white')"></span>
-                            <span class="colorgrey"
+                            <span class="beige"
                                 style="background-color: rgba(244, 205, 149, 0.967);"
                                 onclick="changeImage4('beige')"></span>
-                            <span class="colorgrey"
+                            <span class="grey"
                                 style="background-color: grey;"
                                 onclick="changeImage4('grey')"></span>
                         </div>
@@ -369,29 +374,29 @@
                         </div>
                     </div>
 
-                </div> 
+                </div>
                 <div class="backgroundslider">
                     <div class="backgroundProduct">
                         <div class="cart"><i class='bx bx-cart'></i></div>
                         <div class="product">
                             <img class="ao"
-                                src="1344447_màu_xám-removebg-preview.png" >
+                                src="1344447_màu_xám-removebg-preview.png">
                         </div>
                         <div class="name">Áo Khoác Kaki Chống Nắng </div>
                         <div class="prize">300.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span sizeName="'XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage('black')"></span>
-                            <span class="colorgrey"
+                            <span class="grey"
                                 style="background-color: grey;"
                                 onclick="changeImage('grey')"></span>
                         </div>
@@ -411,24 +416,24 @@
                         <div class="prize">230.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
                             <span>XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
 
-                            <span class="colorblack"
+                            <span class="green"
                                 style="background-color: green;"
                                 onclick="changeImage1('green')"></span>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: rgb(23, 5, 5);"
                                 onclick="changeImage1('black')"></span>
-                            <span class="colorblack"
+                            <span class="brown"
                                 style="background-color: rgb(98, 53, 53);"
                                 onclick="changeImage1('brown')"></span>
-                            <span class="colorgrey"
+                            <span class="yellow"
                                 style="background-color: goldenrod;"
                                 onclick="changeImage1('yellow')"></span>
                         </div>
@@ -449,20 +454,20 @@
                         <div class="prize">370.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="lightblue"
                                 style="background-color: rgb(158, 221, 228);"
                                 onclick="changeImage2('blue')"></span>
-                            <span class="colorgrey"
+                            <span class="pink"
                                 style="background-color: lightpink;"
                                 onclick="changeImage2('pink')"></span>
-                            <span class="colorgrey"
+                            <span class="beige"
                                 style="background-color: beige;"
                                 onclick="changeImage2('beige')"></span>
                         </div>
@@ -483,14 +488,14 @@
                         <div class="prize">320.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage3('black')"></span>
                         </div>
@@ -511,23 +516,23 @@
                         <div class="prize">270.000</div>
                         <div class="size">
                             <h3>Size:</h3>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>X</span>
-                            <span>XL</span>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
                         </div>
                         <div class="color">
                             <h3>Color:</h3>
-                            <span class="colorblack"
+                            <span class="black"
                                 style="background-color: black;"
                                 onclick="changeImage4('black')"></span>
-                            <span class="colorgrey"
+                            <span class="white"
                                 style="background-color: white;"
                                 onclick="changeImage4('white')"></span>
-                            <span class="colorgrey"
+                            <span class="beige"
                                 style="background-color: rgba(244, 205, 149, 0.967);"
                                 onclick="changeImage4('beige')"></span>
-                            <span class="colorgrey"
+                            <span class="grey"
                                 style="background-color: grey;"
                                 onclick="changeImage4('grey')"></span>
                         </div>
@@ -537,7 +542,10 @@
                         </div>
                     </div>
 
-                </div> 
+                </div>
+
+
+           
             </div>
       
             <div class="buttonSlider">
@@ -551,10 +559,1290 @@
         
         <div class="background1">
 
-            <div class="buttonSlider1">
-                <i class='bx bx-chevron-left' ></i>
-                <i class='bx bx-chevron-right'></i>
+            <div class="backgroundsliderContainer1">
+                <div class="backgroundslider1">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="Quan/20230323_EqCoU0VIw2-removebg-preview.png">
+                        </div>
+                        <div class="name">Quần Thun Cotton 4827</div>
+                        <div class="prize">520.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span sizeName="'XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: black;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="Quan/20230520_8Dl4XVtUXR-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Quần Jeans Straight Cotton </div>
+                        <div class="prize">430.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: darkblue;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="Quan/20230802_04Vj6OFD3K-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Quần Short Cotton </div>
+                        <div class="prize">370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: darkred;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="Quan/20230827_nzE7bvw7qi-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Short Straight  </div>
+                        <div class="prize">320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: white;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="Quan/20240930_azRLR3xvrH-w-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Jeans Straight </div>
+                        <div class="prize">270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: beige;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="backgroundslider1">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="Quan/20230323_EqCoU0VIw2-removebg-preview.png">
+                        </div>
+                        <div class="name">Quần Thun Cotton 4827</div>
+                        <div class="prize">520.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span sizeName="'XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: black;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="Quan/20230520_8Dl4XVtUXR-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Quần Jeans Straight Cotton </div>
+                        <div class="prize">430.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: darkblue;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="Quan/20230802_04Vj6OFD3K-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Quần Short Cotton </div>
+                        <div class="prize">370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: darkred;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="Quan/20230827_nzE7bvw7qi-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Short Straight  </div>
+                        <div class="prize">320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: white;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="Quan/20240930_azRLR3xvrH-w-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Jeans Straight </div>
+                        <div class="prize">270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: beige;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="backgroundslider1">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="Quan/20230323_EqCoU0VIw2-removebg-preview.png">
+                        </div>
+                        <div class="name">Quần Thun Cotton 4827</div>
+                        <div class="prize">520.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span sizeName="'XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: black;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="Quan/20230520_8Dl4XVtUXR-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Quần Jeans Straight Cotton </div>
+                        <div class="prize">430.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName='X'>X</span>
+                            <span>XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: darkblue;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="Quan/20230802_04Vj6OFD3K-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Quần Short Cotton </div>
+                        <div class="prize">370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: darkred;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="Quan/20230827_nzE7bvw7qi-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Short Straight  </div>
+                        <div class="prize">320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: white;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="Quan/20240930_azRLR3xvrH-w-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Jeans Straight </div>
+                        <div class="prize">270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="M">M</span>
+                            <span sizeName="L">L</span>
+                            <span sizeName="X">X</span>
+                            <span sizeName="XL">XL</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: beige;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
+            <div class="buttonSlider1">
+                <div class='bx bx-chevron-left-1'> <i class='bx bx-chevron-left'></i></div>
+                <div class='bx bx-chevron-right-1'> <i class='bx bx-chevron-right'></i></div>
+            </div>
+            <div class="titleSeller1"><h1>QuầnT-Clothes</h1></div>   
+        </div>
+
+        <div class="background2">
+
+            <div class="backgroundsliderContainer2">
+                <div class="backgroundslider2">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="giay/1-1-300x300-removebg-preview.png">
+                        </div>
+                        <div class="name">Nike Air Force 1 </div>
+                        <div class="prize">2.520.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: white;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="giay/z5414289847695_f0692ee816fd27b147ce8c5c2cf67ad9-300x300-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Nike React</div>
+                        <div class="prize">3.430.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: #D2B48C;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="giay/z5416858076887_2fd3457ab5aaa60f555c27035116b331-600x600-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Nike Jordan </div>
+                        <div class="prize">4.370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: white;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="giay/z5483401245268_8021a779db78cc2ba8c8a2bbe4ed8e4b-300x300-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Nike Air Force 1  </div>
+                        <div class="prize">2.320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: white;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="giay/z5464569743256_914b6c1557fb937cf5a2e7a4f84e19a1-300x300-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Nike Dunk </div>
+                        <div class="prize">3.270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: black;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="backgroundslider2">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="giay/1-1-300x300-removebg-preview.png">
+                        </div>
+                        <div class="name">Nike Air Force 1 </div>
+                        <div class="prize">2.520.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: white;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="giay/z5414289847695_f0692ee816fd27b147ce8c5c2cf67ad9-300x300-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Nike React</div>
+                        <div class="prize">3.430.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: #D2B48C;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="giay/z5416858076887_2fd3457ab5aaa60f555c27035116b331-600x600-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Nike Jordan </div>
+                        <div class="prize">4.370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: white;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="giay/z5483401245268_8021a779db78cc2ba8c8a2bbe4ed8e4b-300x300-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Nike Air Force 1  </div>
+                        <div class="prize">2.320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: white;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="giay/z5464569743256_914b6c1557fb937cf5a2e7a4f84e19a1-300x300-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Nike Dunk </div>
+                        <div class="prize">3.270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: black;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="backgroundslider2">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="giay/1-1-300x300-removebg-preview.png">
+                        </div>
+                        <div class="name">Nike Air Force 1 </div>
+                        <div class="prize">2.520.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: white;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="giay/z5414289847695_f0692ee816fd27b147ce8c5c2cf67ad9-300x300-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Nike React</div>
+                        <div class="prize">3.430.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: #D2B48C;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="giay/z5416858076887_2fd3457ab5aaa60f555c27035116b331-600x600-removebg-preview.png"
+                                alt>
+                        </div>
+                        <div class="name">Nike Jordan </div>
+                        <div class="prize">4.370.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: white;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="giay/z5483401245268_8021a779db78cc2ba8c8a2bbe4ed8e4b-300x300-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Nike Air Force 1  </div>
+                        <div class="prize">2.320.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: white;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="giay/z5464569743256_914b6c1557fb937cf5a2e7a4f84e19a1-300x300-removebg-preview.png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Nike Dunk </div>
+                        <div class="prize">3.270.000</div>
+                        <div class="size">
+                            <h3>Size:</h3>
+                            <span sizeName="39">39</span>
+                            <span sizeName="40">40</span>
+                            <span sizeName='41'>41</span>
+                            <span sizeName="42">42</span>
+                            <span sizeName="43">43</span>
+                            <span sizeName="44">44</span>
+                        </div>
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: black;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="buttonSlider2">
+                <div class='bx bx-chevron-left-2'> <i class='bx bx-chevron-left'></i></div>
+                <div class='bx bx-chevron-right-2'> <i class='bx bx-chevron-right'></i></div>
+            </div>
+            <div class="titleSeller2"><h1>Giày T-Clothes</h1></div>   
+        </div>
+
+        <div class="background3">
+
+            <div class="backgroundsliderContainer3">
+
+                <div class="backgroundslider3">
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao"
+                                src="balo/balo-nhan-tui-hop-bat-doi-xung---bac-0199---mau-xam-nhat__74814__1709206897-medium-removebg-preview (1).png">
+                        </div>
+                        <div class="name">Patagonia Arbor Classic Pack</div>
+                        <div class="prize">1.520.000</div>
+                       
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: beige;"
+                                onclick="changeImage('black')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao1"
+                                src="balo/balo-vai-du-kieu-dang-the-thao---bac-0203---mau-nau-sang__77419__1724316665-medium-removebg-preview.png" alt>
+                        </div>
+                        <div class="name">Herschel Little America Backpack </div>
+                        <div class="prize">1.430.000</div>
+                      
+                        <div class="color">
+                            <h3>Color:</h3>
+
+                            <span class="green"
+                                style="background-color: orange;"
+                                onclick="changeImage1('green')"></span>
+                            
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao2"
+                                src="balo/balo-vai-du-2-ngan---bac-0186---mau-hong-nhat__72762__1700539104-medium-removebg-preview (1).png"
+                                alt>
+                        </div>
+                        <div class="name">Adidas Classic Backpack </div>
+                        <div class="prize">1.370.000</div>
+                     
+                        <div class="color">
+                            <h3>Color:</h3>
+                    
+                            <span class="beige"
+                                style="background-color: pink;"
+                                onclick="changeImage2('brown')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao3"
+                                src="balo/balo-flip-top-ca-tinh---bac-0201---mau-xam-nhat__74826__1709207186-medium-removebg-preview (1).png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">The North Face Borealis Backpack   </div>
+                        <div class="prize">2.320.000</div>
+                   
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="black"
+                                style="background-color: lightgrey;"
+                                onclick="changeImage3('white')"></span>
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+                    <div class="backgroundProduct">
+                        <div class="cart"><i class='bx bx-cart'></i></div>
+                        <div class="product">
+                            <img class="ao4"
+                                src="balo/balo-basic-nhan-khoa-keo---bac-0212---mau-xanh-da-troi__77403__1724316303-medium-removebg-preview (2).png" alt
+                                onclick="zoom()">
+                        </div>
+                        <div class="name">Quần Jeans Straight </div>
+                        <div class="prize">1.270.000</div>
+                      
+                        <div class="color">
+                            <h3>Color:</h3>
+                            <span class="white"
+                                style="background-color: lightskyblue;"
+                                onclick="changeImage4('white')"></span>
+
+                        </div>
+                        <div class="action">
+                            <button class="addCart">Add cart</button>
+                            <button class="buy">Buy now</button>
+                        </div>
+                    </div>
+
+          
+
+            </div>
+                <div class="backgroundslider3">
+                <div class="backgroundProduct">
+                    <div class="cart"><i class='bx bx-cart'></i></div>
+                    <div class="product">
+                        <img class="ao"
+                            src="balo/balo-nhan-tui-hop-bat-doi-xung---bac-0199---mau-xam-nhat__74814__1709206897-medium-removebg-preview (1).png">
+                    </div>
+                    <div class="name">Patagonia Arbor Classic Pack</div>
+                    <div class="prize">1.520.000</div>
+                   
+                    <div class="color">
+                        <h3>Color:</h3>
+                        <span class="black"
+                            style="background-color: beige;"
+                            onclick="changeImage('black')"></span>
+                        
+                    </div>
+                    <div class="action">
+                        <button class="addCart">Add cart</button>
+                        <button class="buy">Buy now</button>
+                    </div>
+                </div>
+
+                <div class="backgroundProduct">
+                    <div class="cart"><i class='bx bx-cart'></i></div>
+                    <div class="product">
+                        <img class="ao1"
+                            src="balo/balo-vai-du-kieu-dang-the-thao---bac-0203---mau-nau-sang__77419__1724316665-medium-removebg-preview.png" alt>
+                    </div>
+                    <div class="name">Herschel Little America Backpack </div>
+                    <div class="prize">1.430.000</div>
+                  
+                    <div class="color">
+                        <h3>Color:</h3>
+
+                        <span class="green"
+                            style="background-color: orange;"
+                            onclick="changeImage1('green')"></span>
+                        
+                    </div>
+                    <div class="action">
+                        <button class="addCart">Add cart</button>
+                        <button class="buy">Buy now</button>
+                    </div>
+                </div>
+
+                <div class="backgroundProduct">
+                    <div class="cart"><i class='bx bx-cart'></i></div>
+                    <div class="product">
+                        <img class="ao2"
+                            src="balo/balo-vai-du-2-ngan---bac-0186---mau-hong-nhat__72762__1700539104-medium-removebg-preview (1).png"
+                            alt>
+                    </div>
+                    <div class="name">Adidas Classic Backpack </div>
+                    <div class="prize">1.370.000</div>
+                 
+                    <div class="color">
+                        <h3>Color:</h3>
+                
+                        <span class="beige"
+                            style="background-color: pink;"
+                            onclick="changeImage2('brown')"></span>
+                    </div>
+                    <div class="action">
+                        <button class="addCart">Add cart</button>
+                        <button class="buy">Buy now</button>
+                    </div>
+                </div>
+
+                <div class="backgroundProduct">
+                    <div class="cart"><i class='bx bx-cart'></i></div>
+                    <div class="product">
+                        <img class="ao3"
+                            src="balo/balo-flip-top-ca-tinh---bac-0201---mau-xam-nhat__74826__1709207186-medium-removebg-preview (1).png" alt
+                            onclick="zoom()">
+                    </div>
+                    <div class="name">The North Face Borealis Backpack   </div>
+                    <div class="prize">2.320.000</div>
+               
+                    <div class="color">
+                        <h3>Color:</h3>
+                        <span class="black"
+                            style="background-color: lightgrey;"
+                            onclick="changeImage3('white')"></span>
+                    </div>
+                    <div class="action">
+                        <button class="addCart">Add cart</button>
+                        <button class="buy">Buy now</button>
+                    </div>
+                </div>
+
+                <div class="backgroundProduct">
+                    <div class="cart"><i class='bx bx-cart'></i></div>
+                    <div class="product">
+                        <img class="ao4"
+                            src="balo/balo-basic-nhan-khoa-keo---bac-0212---mau-xanh-da-troi__77403__1724316303-medium-removebg-preview (2).png" alt
+                            onclick="zoom()">
+                    </div>
+                    <div class="name">Quần Jeans Straight </div>
+                    <div class="prize">1.270.000</div>
+                  
+                    <div class="color">
+                        <h3>Color:</h3>
+                        <span class="white"
+                            style="background-color: lightskyblue;"
+                            onclick="changeImage4('white')"></span>
+
+                    </div>
+                    <div class="action">
+                        <button class="addCart">Add cart</button>
+                        <button class="buy">Buy now</button>
+                    </div>
+                </div>
+
+      
+
+            </div>
+                <div class="backgroundslider3">
+            <div class="backgroundProduct">
+                <div class="cart"><i class='bx bx-cart'></i></div>
+                <div class="product">
+                    <img class="ao"
+                        src="balo/balo-nhan-tui-hop-bat-doi-xung---bac-0199---mau-xam-nhat__74814__1709206897-medium-removebg-preview (1).png">
+                </div>
+                <div class="name">Patagonia Arbor Classic Pack</div>
+                <div class="prize">1.520.000</div>
+               
+                <div class="color">
+                    <h3>Color:</h3>
+                    <span class="black"
+                        style="background-color: beige;"
+                        onclick="changeImage('black')"></span>
+                    
+                </div>
+                <div class="action">
+                    <button class="addCart">Add cart</button>
+                    <button class="buy">Buy now</button>
+                </div>
+            </div>
+
+            <div class="backgroundProduct">
+                <div class="cart"><i class='bx bx-cart'></i></div>
+                <div class="product">
+                    <img class="ao1"
+                        src="balo/balo-vai-du-kieu-dang-the-thao---bac-0203---mau-nau-sang__77419__1724316665-medium-removebg-preview.png" alt>
+                </div>
+                <div class="name">Herschel Little America Backpack </div>
+                <div class="prize">1.430.000</div>
+              
+                <div class="color">
+                    <h3>Color:</h3>
+
+                    <span class="green"
+                        style="background-color: orange;"
+                        onclick="changeImage1('green')"></span>
+                    
+                </div>
+                <div class="action">
+                    <button class="addCart">Add cart</button>
+                    <button class="buy">Buy now</button>
+                </div>
+            </div>
+
+            <div class="backgroundProduct">
+                <div class="cart"><i class='bx bx-cart'></i></div>
+                <div class="product">
+                    <img class="ao2"
+                        src="balo/balo-vai-du-2-ngan---bac-0186---mau-hong-nhat__72762__1700539104-medium-removebg-preview (1).png"
+                        alt>
+                </div>
+                <div class="name">Adidas Classic Backpack </div>
+                <div class="prize">1.370.000</div>
+             
+                <div class="color">
+                    <h3>Color:</h3>
+            
+                    <span class="beige"
+                        style="background-color: pink;"
+                        onclick="changeImage2('brown')"></span>
+                </div>
+                <div class="action">
+                    <button class="addCart">Add cart</button>
+                    <button class="buy">Buy now</button>
+                </div>
+            </div>
+
+            <div class="backgroundProduct">
+                <div class="cart"><i class='bx bx-cart'></i></div>
+                <div class="product">
+                    <img class="ao3"
+                        src="balo/balo-flip-top-ca-tinh---bac-0201---mau-xam-nhat__74826__1709207186-medium-removebg-preview (1).png" alt
+                        onclick="zoom()">
+                </div>
+                <div class="name">The North Face Borealis Backpack   </div>
+                <div class="prize">2.320.000</div>
+           
+                <div class="color">
+                    <h3>Color:</h3>
+                    <span class="black"
+                        style="background-color: lightgrey;"
+                        onclick="changeImage3('white')"></span>
+                </div>
+                <div class="action">
+                    <button class="addCart">Add cart</button>
+                    <button class="buy">Buy now</button>
+                </div>
+            </div>
+
+            <div class="backgroundProduct">
+                <div class="cart"><i class='bx bx-cart'></i></div>
+                <div class="product">
+                    <img class="ao4"
+                        src="balo/balo-basic-nhan-khoa-keo---bac-0212---mau-xanh-da-troi__77403__1724316303-medium-removebg-preview (2).png" alt
+                        onclick="zoom()">
+                </div>
+                <div class="name">Quần Jeans Straight </div>
+                <div class="prize">1.270.000</div>
+              
+                <div class="color">
+                    <h3>Color:</h3>
+                    <span class="white"
+                        style="background-color: lightskyblue;"
+                        onclick="changeImage4('white')"></span>
+
+                </div>
+                <div class="action">
+                    <button class="addCart">Add cart</button>
+                    <button class="buy">Buy now</button>
+                </div>
+            </div>
+
+  
+
+            </div>
+            </div>
+            <div class="buttonSlider3">
+                <div class='bx bx-chevron-left-3'> <i class='bx bx-chevron-left'></i></div>
+                <div class='bx bx-chevron-right-3'> <i class='bx bx-chevron-right'></i></div>
+            </div>
+            <div class="titleSeller3"><h1>Balo T-Clothes</h1></div>   
         </div>
 
                 <div class="head">
@@ -562,14 +1850,29 @@
                         <img class="logo" src="Logo.png"
                             alt="Description of the image"
                             onclick="refreshPage()">
-                        <a class="food" href target="_self">Áo</a>
+                        <a class="food" href target="_self">
+                            <i class="fa-solid fa-shirt"></i>
+                            Áo</a>
                         <a class="drink" href target="_self">Quần</a>
-                        <a class="cake" href target="_self">Giày</a>
-                        <a class="support" href target="_self">Mắt kính</a>
-                        <a class="account" href target="_self">Balo</a>
+                        <a class="cake" href target="_self">
+                            <i class="fa-solid fa-shoe-prints"></i>
+                            Giày</a>
+                        <a class="account" href target="_self">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            Balo</a>
+                            <a class="support" href target="_self">
+                                <i class='bx bx-support'></i>
+                                Dịch vụ</a>
                         <div class="giohang" onclick=" "><i class='bx bxs-cart' >
+
+                            <div class="giohangContainer">
+                                <div class="giohangSilder"></div>
+                                <div class="pay">Thanh toán</div>
+                            
+                            </div>
                             <div class="soluong">0</div>
                         </i>
+                        
                         <div class="menuBuy">
                             <div></div>
                         </div>
